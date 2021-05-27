@@ -1,0 +1,7 @@
+Temat: 
+"Aplikacja związana z grą League of Legends, 
+podająca najbardziej pasujących bohaterów do 
+rozgrywki na podstawie bohaterów drużyny przeciwnej"
+
+Autorzy: 
+Jakub Migała, Adam Wieliczko

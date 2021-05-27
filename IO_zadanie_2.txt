@@ -1,0 +1,36 @@
+Tytuł: LoL Champions Matcher
+Autorzy: Jakub Migała, Adam Wieliczko
+
+Opis domeny:
+-Aplikacja skierowana będzie do średniozaawansowanych graczy League of Legends
+-Aplikacja jest darmowa, niekomercyjna
+-Promowanie aplikacji będzie odbywać się wyłącznie przez social media i znajomych.
+
+Dane techinczne:
+-zespół złożony z dwóch projektantów
+-aplikacja będzie zintegrowana z bazą danych przechowującą informację o
+bohaterach oraz ich atrybutach
+-firma jeszcze nie zarejestrowana, na czarno (brak lokalizacji)
+-aplikacja kompatybilna z systemami Windows
+-jedyny używany sprzęt to prywatne komputery pracowników
+
+Wymagania aplikacji:
+
+Must:
+M1: Aplikacja wyświetla na podstawie podanych przez użytkownika bohaterów innych bohaterów którzy będą
+najsktuczeniejsi przeciwko nim
+M2: Aplikacja będzie działać w trybie offline
+M3: Nieodłączną częścią aplikacji będzie baza danych z bohaterami oraz ich atrybutami
+M4: Aplikacja umożliwia ręczne modyfikacje dostępnych bohaterów (bany, nadmiar magicznych obrażeń itp)
+M5: Aplikacja nie będzie korzystać z żadnych danych użytkownika
+
+Should:
+S1: Baza danych powinna być regularnie aktualizowana
+S2: Aplikacja powinna być maksymalnie zoptymalizowana
+S3: Przejrzysty i łatwy interfejs użytkownika
+
+Could:
+C1: Aplikacja wskazuje cechy na podstawie których dana postać została uwzględniona
+
+
+Aplikacja będzie stworzona w Javie z interfejsem graficznym i będzie połączona ze wspomnianą wcześniej bazą danych.

@@ -1,0 +1,70 @@
+Must:
+M1: Aplikacja wyświetla na podstawie podanych przez użytkownika bohaterów innych bohaterów którzy będą
+najsktuczeniejsi przeciwko nim
+M2: Aplikacja będzie działać w trybie offline
+M3: Nieodłączną częścią aplikacji będzie baza danych z bohaterami oraz ich atrybutami
+M4: Aplikacja umożliwia ręczne modyfikacje dostępnych bohaterów (bany, nadmiar magicznych obrażeń itp)
+M5: Aplikacja nie będzie korzystać z żadnych danych użytkownika
+
+Should:
+S1: Baza danych powinna być regularnie aktualizowana
+S2: Aplikacja powinna być maksymalnie zoptymalizowana
+S3: Przejrzysty i łatwy interfejs użytkownika
+
+Could:
+C1: Aplikacja wskazuje cechy na podstawie których dana postać została uwzględniona
+
+
+
+Przypadki użycia:
+-M3
+Nazwa PU: Połącz_aplikację_z_baza_danych_bohaterów
+Cel: Dostęp do danych o bohaterach
+Warunki początkowe: 
+Uruchomienie aplikacji na komputerze klienta.
+Warunki końcowe:
+Załadowanie danych do aplikacji.
+Scenariusz:
+1. Należy wyłącznie uruchomić aplikację, by baza danych została 
+automatycznie podłączona do programu.
+
+-M4
+Nazwa PU: Zmodyfikuj_listę_dostępnych_bohaterów
+Cel: Zaktualizowanie faktycznie dostępnej puli bohaterów.
+Warunki początkowe:
+Aplikacja musi być uruchomiona.
+Warunki końcowe:
+Zmodyfikowanie za pomocą listy rozwijaniej dostępnych bohaterów.
+Scenariusz:
+1. Użytkownik subiektywnie wybiera bohaterów, którzy w danej sytuacji 
+nie będą brani pod uwagę podczas działania aplikacji.
+2. W przypadku wybrania konkretnego bohatera, kolejne
+listy rozwijane nie powinny go posiadać jako jednej z opcji.
+3. Zatwierdzenie przyciskiem wprowadzonych danych.
+
+-M1
+Nazwa PU: Wyświetl_wyniki_końcowe
+Cel: Zwrócenie rezultatów obliczeń programu
+Warunki początkowe:
+Aplikacja musi być uruchomiona.
+Warunki końcowe:
+Drużyna przeciwników musi być uzupełniona.
+W przypadku poprawności wprowadzonych przez użytkownika danych 
+umożliwia wciśnięcie przycisku rozpoczynającego obliczenia.
+Scenariusz:
+1. W analogiczny sposób do M4, użytkownik podaje skład druzyny przeciwnej.
+2. Ewentualne użycie przypadku użycia M4.
+3. Wciśnięcie guzika rozpoczynającego obliczenia.
+4. Wyświetlenie wyników.
+
+-C1
+Nazwa PU: Podaj_uzasadnienie_wyników
+Cel: Podanie uzasadnienia dla użytkownika, dlaczego akurat ci bohaterowie zostali wybrani
+Warunki początkowe:
+Poprawnie przeprowadzony przypadek użycia M1(Wyświetl_wyniki_końcowe).
+Warunki końcowe:
+Zwraca listę cech i atrybutów, jeżeli co najmniej jeden bohater został zwrócony jako wynik.
+Scenariusz:
+1. W przypadku niekliknięcia przycisku "Pokaż opis", program nie zwraca uzasadnienia.
+2. W przeciwnym przypadku, uzasadnienie wyników pojawia się na ekranie.
+

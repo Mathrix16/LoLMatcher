@@ -1,0 +1,25 @@
+INSTRUKCJA PRZYGOTOWANIA ŚRODOWISKA DO URUCHOMIENIA APLIKACJI
+
+* Aplikacja tworzona była w środowisku IntelliJ, w przypadku innych środowisk, istnieje szansa pewnych niezgodności z poniższą instrukcją.
+
+* Zakładamy, że użytkownik posiada MSSQL Server 2012, jeżeli nie, należy go pobrać z oficjalnej strony producenta
+
+* Pobrać i zainstalować javaFX sdk (sugerowana wersja: 11.0.2) w dowolnym miejscu na dysku twardym
+
+* Przywrócić, w MSSQL Server 2012, bazę danych "Heroes" z kopii zapasowej, znajdującej się w folderze z projektem
+
+* Wejść na stronę https://www.microsoft.com/en-us/download/details.aspx?id=58505, po czym, po ustaleniu języka na angielski, kliknąć "Download";
+
+* Na liście plików do pobrania zaznaczyć "sqljdbc_7.4.1.0_enu.exe", po czym kliknąć "Next";
+
+* Uruchomić plik "sqljdbc_7.4.1.0_enu.exe", a następnie wypakować bibliotekę do dowolnej lokalizacji na dysku twardym;
+
+* Uruchomić "SQL Server Configuration Manager", po czym z drzewa "SQL Server Network Configuration (32bit) wybrać "Protocols for MSSQLServer", a następnie włączyć protokół "TCP / IP" poprzez jego zaznaczenie, a następnie kliknięcie "Enable" z menu kontekstowego, które pojawi się po kliknięciu prawym przyciskiem myszy;
+
+* Z tego samego menu kontekstowego wybrać "Właściwości", po czym na karcie "IP Addresses" nowootwartego okna "Właściwości: TCP/IP" odszukać element drzewa o nazwie "IPAll". Po jego rozwinięciu (należy kliknąć w znak "+"), odszukać pole "TCP Port", które zawiera numer portu, na którym będzie nasłuchiwać Microsoft SQL Server. Wartość tego pola przyda się przy okazji tworzenia connection stringa przy łączeniu się z SQL Serverem z poziomu Javy;
+
+* Z listy w lewej części okna głównego programu "SQL Server Configuration Manager" wybrać "SQL Server Services", po czym zrestartować usługę "SQL Server (MSSQLSERVER) poprzez jej zaznaczenie na liście w prawej części okna głównego, a następnie wybranie z menu kontekstowego opcji "Restart";
+
+* W zależności od tego, czy używany system operacyjny jest 64, czy 32-bitowy, wejść do katalogu "Microsoft JDBC Driver 6.2 for SQL Server\sqljdbc_6.2\enu\auth\x64" lub (odpowiednio) "Microsoft JDBC Driver 7.4 for SQL Server\sqljdbc_7.4\enu\auth\x64", po czym skopiować plik "sqljdbc_auth.dll" do katalogu "Java\jdk1.8.0_151\bin"(lub inna wersja jdk) oraz do analogicznego katalogu dla JavyFX(w aplikacji użyto javafx sdk-11.0.2);
+
+* W razie dalszych problemów, prosimy o kontakt.
